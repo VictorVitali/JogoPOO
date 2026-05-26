@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+title: Car Racing
+short-description: Car Racing
+description: Control keys:<br>"a" to move left<br>"s" to move right<br>"
+ r" to move slow<br>"space" to move faster<br><br>Don't be hit by the ot
+ her cars<br>Score as many points as possible
+url: about.me/william.noronha
+greenfoot-version: 3.7.1
+java-version: 11.0.14.1
+java-vm-name: OpenJDK 64-Bit Server VM
+java-vm-version: 11.0.14.1+1
+java-vm-vendor: Eclipse Adoptium
+os-name: Windows 10
+os-version: 10.0
+os-arch: amd64
+java-home: C:\Program Files\Greenfoot\jdk
+width: 420.0
+height: 672.0
+Main-Class: greenfoot.export.GreenfootScenarioViewer
+Class-Path:  https://www.greenfoot.org/sharedjars/Greenfoot-core-3.0.jar
+  https://www.greenfoot.org/sharedjars/jl1.0.1.jar https://www.greenfoot
+ .org/sharedjars/lang-stride.jar
+
