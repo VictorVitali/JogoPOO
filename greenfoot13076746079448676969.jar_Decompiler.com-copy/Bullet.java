@@ -9,6 +9,9 @@ public class Bullet extends Actor {
          this.getWorld().showText("GAME OVER", 150, 450);
          Greenfoot.stop();
       }
-
+      
+      if(this.getY() == 550){
+          getWorld().removeObject(this);
+      }
    }
 }

@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Inimigo1 here.
  * 
@@ -13,9 +12,17 @@ public class Inimigo extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */    
     public void act()
-    {         
-        if (Greenfoot.getRandomNumber(20) < 3) {
-            
+    {   
+        if (Greenfoot.getRandomNumber(5) < 1) {
+             this.setLocation(this.getX() + 5, this.getY());
+        }
+        if (Greenfoot.getRandomNumber(5) < 1) {
+             this.setLocation(this.getX() - 5, this.getY());
+        }
+        this.setLocation(this.getX(), this.getY()-1);
+
+        if (Greenfoot.getRandomNumber(50) < 1) {
+            getWorld().addObject(new Bullet(), this.getX(), this.getY());
          }
         // Add your action code here.
     }
