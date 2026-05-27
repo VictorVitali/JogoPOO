@@ -20,7 +20,7 @@ public class Nave1 extends Actor {
       
 
       if (Greenfoot.isKeyDown("space")) {
-         this.setLocation(this.getX(), this.getY() - 3);
+         getWorld().addObject(new TiroNave(), this.getX(), this.getY() - 20);
       }
 
       if (Greenfoot.isKeyDown("r")) {
