@@ -13,13 +13,8 @@ public class Inimigo extends Actor
      */    
     public void act()
     {   
-        if (Greenfoot.getRandomNumber(5) < 1) {
-             this.setLocation(this.getX() + 5, this.getY());
-        }
-        if (Greenfoot.getRandomNumber(5) < 1) {
-             this.setLocation(this.getX() - 5, this.getY());
-        }
-        this.setLocation(this.getX(), this.getY()-1);
+        int direcao = ((int)(System.currentTimeMillis() / 600) % 2 == 0) ? 1 : -1;
+        this.setLocation(this.getX() + direcao, this.getY() - 1);
 
         if (Greenfoot.getRandomNumber(50) < 1) {
             getWorld().addObject(new Bullet(), this.getX(), this.getY());

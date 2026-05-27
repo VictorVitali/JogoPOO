@@ -14,9 +14,12 @@ public class Space extends World {
 
    private void prepare() {
       Nave1 n1 = new Nave1();
-      Inimigo enemy = new Inimigo();
       this.addObject(n1, 151, 558);
-      this.addObject(enemy, 151, 5);
+
+      int[] posicoesX = {30, 65, 100, 135, 170};
+      for (int i = 0; i < posicoesX.length; i++) {
+         this.addObject(new Inimigo(), posicoesX[i], 40);
+      }
    }
 
    public void act() {
