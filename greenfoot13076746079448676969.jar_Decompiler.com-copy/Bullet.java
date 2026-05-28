@@ -10,7 +10,7 @@ public class Bullet extends Actor {
          Greenfoot.stop();
       }
       
-      if(this.getY() == 550){
+      if(this.getY() >= 650){
           getWorld().removeObject(this);
       }
    }

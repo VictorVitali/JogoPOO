@@ -6,9 +6,11 @@ public class Space extends World {
    public static int PONTOS = 0;
    int sec = 0;
    int tempoRespawn = 0;
+   int posicaoX = 20;
+   int nivel = 1;
 
    public Space() {
-      super(200, 600, 1);
+      super(400, 800, 1);
       this.prepare();
       PONTOS = 0;
    }
@@ -20,9 +22,12 @@ public class Space extends World {
    }
 
    private void criarInimigos() {
-      int[] posicoesX = {30, 65, 100, 135, 170};
-      for (int i = 0; i < posicoesX.length; i++) {
-         this.addObject(new Inimigo(), posicoesX[i], 40);
+      this.nivel += 1;
+      this.posicaoX = 20;
+      int inimigos = this.nivel + 4;
+      for (int i = 0; i < inimigos; i++) {
+         this.posicaoX = this.posicaoX + 30;
+         this.addObject(new Inimigo(), this.posicaoX, 40);
       }
    }
 
