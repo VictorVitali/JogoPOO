@@ -27,7 +27,7 @@ public class Space extends World {
       int inimigos = this.nivel + 4;
       for (int i = 0; i < inimigos; i++) {
          this.posicaoX = this.posicaoX + 30;
-         this.addObject(new Inimigo(), this.posicaoX, 40);
+         this.addObject(new Inimigo(this.nivel), this.posicaoX, 40);
       }
    }
 

@@ -9,6 +9,19 @@ public class Inimigo extends Actor
 {
     int x = 0;
     int moveSpeed = 1;
+    int nvl;
+    int vidas;
+    
+    public Inimigo (int Nivel){
+        this.nvl = Nivel;
+        this.vidas = 1 + (Nivel / 2);
+     } 
+    public void perderVida(int qnt){
+        this.vidas = this.vidas - qnt;
+        if(this.vidas == 0){
+            getWorld().removeObject(this);
+        }
+    }
     public void act()
     {   
         int direcao = ((int)(System.currentTimeMillis() / 600) % 2 == 0) ? 1 : -1;
