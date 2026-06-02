@@ -4,6 +4,7 @@ import greenfoot.World;
 
 public class Space extends World {
    public static int PONTOS = 0;
+   public static int Poder = 0;
    int sec = 0;
    int tempoRespawn = 0;
    int posicaoX = 20;
@@ -37,6 +38,7 @@ public class Space extends World {
       this.getBackground().drawImage(bg, 0, scrollAmt);
       this.getBackground().drawImage(bg, 0, scrollAmt - this.getHeight());
       this.showText("Pontos: " + PONTOS, 120, 30);
+      this.showText("" + Poder, 380, 780);
 
       if (this.getObjects(Inimigo.class).isEmpty()) {
          this.tempoRespawn++;

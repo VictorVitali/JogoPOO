@@ -6,8 +6,11 @@ public class Bullet extends Actor {
       this.setLocation(this.getX(), this.getY() + 5);
       
       if (this.isTouching(Nave1.class)) {
+         Space.Poder--;
+         if(Space.Poder == 0){
          this.getWorld().showText("GAME OVER", 150, 450);
          Greenfoot.stop();
+         }
       }
       
       if(this.getY() >= 650){

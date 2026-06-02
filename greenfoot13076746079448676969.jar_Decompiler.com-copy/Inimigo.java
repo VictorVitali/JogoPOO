@@ -19,6 +19,7 @@ public class Inimigo extends Actor
     public void perderVida(int qnt){
         this.vidas = this.vidas - qnt;
         if(this.vidas == 0){
+            Space.Poder++;
             getWorld().removeObject(this);
         }
     }

@@ -8,11 +8,12 @@ public class TiroNave extends Actor {
          Inimigo inimigo = (Inimigo)getOneIntersectingObject(Inimigo.class);
          inimigo.perderVida(1);
          Space.PONTOS++;
-         getWorld().removeObject(this);
-         if(Greenfoot.getRandomNumber(50) > 1){
-              item Item = new Item();
-              this.addObject(Item, this.getX(), this.getY());
+
+         if (Greenfoot.getRandomNumber(100) < 20) {
+            getWorld().addObject(new ItemVelocidade(), this.getX(), this.getY());
          }
+
+         getWorld().removeObject(this);
       } else if (this.getY() <= 0) {
          getWorld().removeObject(this);
       }
